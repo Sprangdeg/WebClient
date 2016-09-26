@@ -1,0 +1,36 @@
+.form-vertical {
+	background-color: lightblue;
+}
+
+#formHolder {
+	background-color: lightblue;
+}
+
+.form-group {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 50px;
+}
+
+
+
+.fika{
+	background-color: lightblue;
+	text-align: center;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	color: white;
+	margin-top: 100px;
+}
+
+#answer{
+	padding: 10px;
+
+}
+
+.time{
+	font-size: 250%;
+}
