@@ -1,0 +1,98 @@
+<h2>MARTINS <br> STUDENTORGANISATIONSAPPLIKATION</h2>
+
+<div id="appWindow">
+  <div id="addStudentInfo">
+    <h3>Elevinformation</h3>
+    <label for="studentName" style="color: white;">Namn (Max 18 tecken)</label><br>
+    <input id="studentName" #studentName (keyup.enter)="addStudent(studentName.value, studentKnowledge.value); studentName.value=''" studentName.value=''><br>
+    <label for="studentKnowledge" style="color: white;">Kunskapsnivå (1-4)</label><br>
+    <input id="studentKnowledge" #studentKnowledge (keyup.enter)="addStudent(studentName.value, studentKnowledge.value)" studentKnowledge.value=''><br>
+    <button (click)="addStudent(studentName.value, studentKnowledge.value)">Add</button>              
+  </div>
+    <br><br>
+
+    <div class="row">
+      <div id="group1" class="bench"> 
+        <label>Grupp 1</label><br>
+        <ul>
+          <li *ngFor="let student of group1">
+            {{student.name}} ({{student.knowledge}})
+          </li>
+        </ul>
+      </div>
+      <div id="group2" class="bench"> 
+        <label>Grupp 2</label><br>
+        <ul>
+          <li *ngFor="let student of group2">
+            {{ student.name  }} ({{student.knowledge}})
+          </li>
+        </ul>
+      </div>
+      <div id="group3" class="bench"> 
+        <label>Grupp 3</label><br>
+        <ul>
+          <li *ngFor="let student of group3">
+            {{ student.name  }} ({{student.knowledge}})
+          </li>
+        </ul>
+      </div>
+      <div id="group4" class="bench">
+        <label>Grupp 4</label><br> 
+        <ul>
+          <li *ngFor="let student of group4">
+            {{ student.name  }} ({{student.knowledge}})
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="group5" class="bench"> 
+        <label>Grupp 5</label><br>
+        <ul>
+          <li *ngFor="let student of group5">
+            {{ student.name }} ({{student.knowledge}})
+          </li>
+        </ul>
+      </div>
+      <div id="group6" class="bench"> 
+        <label>Grupp 6</label><br>
+        <ul>
+          <li *ngFor="let student of group6">
+            {{ student.name  }} ({{student.knowledge}})
+          </li>
+        </ul>
+      </div>
+      <div id="group7" class="bench"> 
+        <label>Grupp 7</label><br>
+        <ul>
+          <li *ngFor="let student of group7">
+            {{ student.name  }} ({{student.knowledge}})
+          </li>
+        </ul>
+      </div>
+      <div id="group8" class="bench">
+        <label>Grupp 8</label><br> 
+        <ul>
+          <li *ngFor="let student of group8">
+            {{ student.name  }} ({{student.knowledge}})
+          </li> 
+        </ul>
+      </div>
+    </div>
+
+    
+
+    <table>
+      <tr>
+        <th>Id</th>
+        <th>Namn</th> 
+        <th>Kunskapsnivå</th>
+      </tr>
+      <tr *ngFor="let student of students">
+        <td>{{student.id}}</td> 
+        <td>{{student.name}}</td> 
+        <td>{{student.knowledge}}</td>
+      </tr>
+    </table>
+</div>

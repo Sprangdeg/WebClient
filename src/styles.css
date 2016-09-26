@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+.paragraph {
+  text-align: justify;
+  margin-bottom: 1em;
+}
+
+.appBody {
+  margin-left: 3%;
+  margin-right: 3%;
+  display: inline-block;
+}

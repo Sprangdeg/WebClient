@@ -1,0 +1,122 @@
+:host {
+  display: block;
+  background-color: rgb(1, 92, 101);
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-right: 50px;
+  padding-bottom: 50px;
+}
+
+li{
+    margin-right: 20px;
+}
+
+.row{
+    width: 1100px;
+    min-height: 200px;
+    Text-align:center;
+}
+
+.bench{
+    display:inline-block;
+    margin-left: 10px; 
+    min-width: 200px;
+    border: 1px solid white;
+    padding:1em;
+    color: white;
+    background-color: #03a1b0;
+}
+    
+input {
+    margin-bottom: 10px;
+}
+
+table {
+    border: 1px solid white;
+    width: 20em;
+}
+
+th {
+    text-align: left;
+    color: white;
+    text-shadow: 2px 2px black;
+    padding: 5px;
+}
+
+td {
+    text-align: left;
+    color: white;
+    padding: 5px;
+}
+
+#appWindow {
+    padding: 2em;
+    background-color: #028E9B;
+}
+
+h2 {
+	background-color: #FF9A40;
+	text-align: center;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+#addStudentInfo{
+    border: 1px solid white;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-bottom: 2em;
+    border-collapse: collapse;
+    max-width: 300px; 
+}
+
+.bench label {
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+h3 {
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+tr:nth-child(even) {
+    background-color: #03a1b0;
+}
+
+
+.form-vertical {
+	background-color: lightblue;
+}
+
+#formHolder {
+	background-color: lightblue;
+}
+
+.form-group {
+	width: 300px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 50px;
+}
+
+.fika{
+	background-color: lightblue;
+	text-align: center;
+	width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px;
+	color: white;
+	margin-top: 100px;
+}
+
+#answer{
+	padding: 10px;
+
+}
+
+.time{
+	font-size: 250%;
+}
