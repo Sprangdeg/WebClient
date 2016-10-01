@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Student } from './student';
 
 @Component({
-  moduleId: module.id,
+
   selector: 'app-student-organizer',
   templateUrl: './student-organizer.component.html',
   styleUrls: ['./student-organizer.component.css']
