@@ -13,6 +13,7 @@ import { routing, appRoutingProviders }  from './app.routing';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { StudentOrganizerComponent } from './student-organizer/student-organizer.component';
 import { WhatIsItNowComponent } from './what-is-it-now/what-is-it-now.component';
+import { StryktipsetTableComponent } from './stryktipset/stryktipset-table/stryktipset-table.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { WhatIsItNowComponent } from './what-is-it-now/what-is-it-now.component'
     StryktipsetComponent,
     PagenotfoundComponent,
     StudentOrganizerComponent,
-    WhatIsItNowComponent
+    WhatIsItNowComponent,
+    StryktipsetTableComponent
   ],
   imports: [
     BrowserModule,

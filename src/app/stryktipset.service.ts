@@ -1,7 +1,7 @@
 import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable }       from 'rxjs/Observable';
-import { stryktipsetCoupong } from './stryktipset/stryktipsetCoupong';
+import { Match } from './stryktipset/Match';
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';
@@ -16,14 +16,29 @@ export class StryktipsetService {
   private stryktipsetCoupongUrl = 'http://localhost:2021/api/Stryktipset';  // URL to web API
   constructor (private http: Http) {}
 
-  getStryktipsetCoupong (): Observable<stryktipsetCoupong> {
+  getStryktipsetCoupong (): Observable<Match[]> {
     return this.http.get(this.stryktipsetCoupongUrl)
-                    .map(this.extractData)
+                    .map(this.toMatch)
                     .catch(this.handleError);
   }
-  private extractData(res: Response) {
-    let body = res.json();
-    return body.data || { };
+
+  private toMatch(res:Response): Match[] {
+    var resMatches =  res.json().matches;
+    let matches: Match[] = [];
+
+   var arr = Object.keys(resMatches).map(key => resMatches[key]);
+
+   for (let mat of arr[0]) {
+      matches.push(<Match>({
+        Id : mat.Id,
+        HomeTeam : mat.HomeTeam,
+        AwayTeam : mat.AwayTeam,
+        HomeWin : mat.HomeWin,
+        AwayWin : mat.AwayWin,
+        Draw : mat.Draw
+        }))
+    }
+    return matches;
   }
   private handleError (error: any) {
     // In a real world app, we might use a remote logging infrastructure

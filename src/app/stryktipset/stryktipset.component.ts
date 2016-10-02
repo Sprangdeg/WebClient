@@ -1,32 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import {Http} from '@angular/http';
 
-import { stryktipsetCoupong } from './StryktipsetCoupong'
-import { StryktipsetService } from '../stryktipset.service'
+import { StryktipsetTableComponent } from './stryktipset-table/stryktipset-table.component'
 
 @Component({
   selector: 'app-stryktipset',
   templateUrl: 'stryktipset.component.html',
-  styleUrls: ['stryktipset.component.css'],
-  providers: [ StryktipsetService ]
+  styleUrls: ['stryktipset.component.css']
 })
 
 export class StryktipsetComponent implements OnInit {
-    errorMessage: string;
-    content: stryktipsetCoupong;
-    mode = 'Observable';
-
-    constructor(private stryktipsetService: StryktipsetService) { }
+    constructor() { }
 
   ngOnInit() {
-     this.getStryktipsetCoupong();
-  }
-
-  getStryktipsetCoupong(){
-      this.stryktipsetService.getStryktipsetCoupong()
-                                .subscribe(
-                                    content => this.content = content,
-                                    error =>  this.errorMessage = <any>error);;
   }
 
 }

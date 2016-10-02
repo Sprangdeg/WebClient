@@ -1,0 +1,24 @@
+.coupongMarker {
+    margin: 0px;
+}
+
+#stryktipsetMatches{
+    width: 20em;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+#stryktipsetMarkings{
+    width: 8em;
+    display: inline-block;
+    margin-right: 1em;
+}
+
+#stryktipsetPercent{
+    width: 12em;
+    display: inline-block;
+}
+
+.totalPrice{
+    margin-left: 30%;
+}

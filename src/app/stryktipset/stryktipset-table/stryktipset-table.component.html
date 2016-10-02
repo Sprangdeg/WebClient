@@ -1,0 +1,62 @@
+<div id="stryktipsetMatches" class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th></th>
+        <th>Home</th>
+        <th>Away</th>
+      </tr>
+    </thead>
+        <tbody>
+          <tr *ngFor="let match of coupong; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{match.HomeTeam}}</td>
+            <td>{{match.AwayTeam}}</td>
+          </tr>
+        </tbody>
+  </table>
+</div>
+
+<div id="stryktipsetMarkings" class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>X</th>
+        <th>2</th>
+      </tr>
+    </thead>
+        <tbody>
+          <tr *ngFor="let match of coupong; let i = index">
+            <td><input class="coupongMarker" type="checkbox"></td>
+            <td><input class="coupongMarker" type="checkbox"></td>
+            <td><input class="coupongMarker" type="checkbox"></td>
+          </tr>
+        </tbody>
+  </table>
+</div>
+
+
+<div id="stryktipsetPercent" class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>H.Win</th>
+        <th>Draw</th>
+        <th>A.Win</th>
+      </tr>
+    </thead>
+        <tbody>
+          <tr *ngFor="let match of coupong">
+            <td>{{match.HomeWin}}%</td>
+            <td>{{match.Draw}}%</td>
+            <td>{{match.AwayWin}}%</td>
+          </tr>
+        </tbody>
+  </table>
+</div>
+
+
+<h3 class="totalPrice">Total: {{price}} kr<h3>
+
+<div class="error" *ngIf="errorMessage">{{errorMessage}}</div>
