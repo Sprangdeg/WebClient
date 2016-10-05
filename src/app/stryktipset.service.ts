@@ -35,7 +35,10 @@ export class StryktipsetService {
         AwayTeam : mat.AwayTeam,
         HomeWin : mat.HomeWin,
         AwayWin : mat.AwayWin,
-        Draw : mat.Draw
+        Draw : mat.Draw,
+        HomeMark: false,
+        DrawMark: false,
+        AwayMark: false,
         }))
     }
     return matches;

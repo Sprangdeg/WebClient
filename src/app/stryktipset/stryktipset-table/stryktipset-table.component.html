@@ -27,16 +27,35 @@
       </tr>
     </thead>
         <tbody>
-          <tr *ngFor="let match of coupong; let i = index">
-            <td><input class="coupongMarker" type="checkbox"></td>
-            <td><input class="coupongMarker" type="checkbox"></td>
-            <td><input class="coupongMarker" type="checkbox"></td>
+          <tr *ngFor="let match of coupong;">
+            <td><input [(ngModel)]="match.HomeMark" class="coupongMarker" type="checkbox"></td>
+            <td><input [(ngModel)]="match.DrawMark" class="coupongMarker" type="checkbox"></td>
+            <td><input [(ngModel)]="match.AwayMark" class="coupongMarker" type="checkbox"></td>
           </tr>
         </tbody>
   </table>
 </div>
 
+<div id="stryktipsetMarkings" class="table-responsive">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>1</th>
+        <th>X</th>
+        <th>2</th>
+      </tr>
+    </thead>
+        <tbody>
+          <tr *ngFor="let match of coupong;">
+            <td>{{match.HomeMark}}</td>
+            <td>{{match.DrawMark}}</td>
+            <td>{{match.AwayMark}}</td>
+          </tr>
+        </tbody>
+  </table>
+</div>
 
+<!--
 <div id="stryktipsetPercent" class="table-responsive">
   <table class="table table-hover">
     <thead>
@@ -55,7 +74,7 @@
         </tbody>
   </table>
 </div>
-
+-->
 
 <h3 class="totalPrice">Total: {{price}} kr<h3>
 

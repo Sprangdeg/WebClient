@@ -21,8 +21,8 @@ export class StryktipsetTableComponent implements OnInit {
      this.getStryktipsetCoupong();
   }
 
-  onSelect(match){
-    alert("Hello");
+  calculatePrice(){
+    alert("Price is: ");
   }
 
   getStryktipsetCoupong(){
