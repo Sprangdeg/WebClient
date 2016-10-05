@@ -10,7 +10,7 @@ export class Match{
   ) {}
 }
 
-export class Mark{
+export class MarkRow{
   constructor ( 
   public HomeMark: boolean,
   public DrawMark: boolean,

@@ -1,8 +1,7 @@
 import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable }       from 'rxjs/Observable';
-import { Match } from './stryktipset/Match';
-import { Mark } from './stryktipset/Match'
+import { Match, MarkRow } from './stryktipset/Match';
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';
@@ -47,26 +46,26 @@ export class StryktipsetService {
 
 
 
-  getStryktipsetMarks() : Observable<Match[]> {
+  getStryktipsetMarks() : Observable<MarkRow[]> {
     return this.http.get(this.stryktipsetUrl + '/EvaluateCoupong')
-                    .map(this.toMatch)
+                    .map(this.toMarks)
                     .catch(this.handleError);
   }
 
-  private toMarks(res : Response) : Mark[]{
-        var resMarks =  res.json().matches;
-    let marks: Mark[] = [];
+  private toMarks(res : Response) : MarkRow[]{
+        var resMarks =  res.json();
+    let marks: MarkRow[] = [];
 
    var arr = Object.keys(resMarks).map(key => resMarks[key]);
 
-   for (let mat of arr[0]) {
-      marks.push(<Mark>({
-        HomeMark: mat.,
-        DrawMark: mat.,
-        AwayMark: mat.,
+   for (let mat of arr) {
+      marks.push(<MarkRow>({
+        HomeMark: mat.AwayMark,
+        DrawMark: mat.DrawMark,
+        AwayMark: mat.HomeMark,
         }))
     }
-    return matches;
+    return marks;
   }
 
   private handleError (error: any) {
