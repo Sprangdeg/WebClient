@@ -7,7 +7,11 @@ export class Match{
   public HomeWin : number,
   public AwayWin : number,
   public Draw : number,
-  
+  ) {}
+}
+
+export class Mark{
+  constructor ( 
   public HomeMark: boolean,
   public DrawMark: boolean,
   public AwayMark: boolean

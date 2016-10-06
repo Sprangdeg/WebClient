@@ -2,6 +2,7 @@ import { Injectable }     from '@angular/core';
 import { Http, Response } from '@angular/http';
 import { Observable }       from 'rxjs/Observable';
 import { Match } from './stryktipset/Match';
+import { Mark } from './stryktipset/Match'
 
 import 'rxjs/add/operator/catch';
 import 'rxjs/add/operator/debounceTime';
@@ -13,11 +14,11 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class StryktipsetService {
-  private stryktipsetCoupongUrl = 'http://localhost:2021/api/Stryktipset';  // URL to web API
+  private stryktipsetUrl = 'http://localhost:2021/api/Stryktipset';  // URL to web API
   constructor (private http: Http) {}
 
-  getStryktipsetCoupong (): Observable<Match[]> {
-    return this.http.get(this.stryktipsetCoupongUrl)
+  getStryktipsetCoupong () : Observable<Match[]> {
+    return this.http.get(this.stryktipsetUrl + '/getMatches')
                     .map(this.toMatch)
                     .catch(this.handleError);
   }
@@ -43,6 +44,31 @@ export class StryktipsetService {
     }
     return matches;
   }
+
+
+
+  getStryktipsetMarks() : Observable<Match[]> {
+    return this.http.get(this.stryktipsetUrl + '/EvaluateCoupong')
+                    .map(this.toMatch)
+                    .catch(this.handleError);
+  }
+
+  private toMarks(res : Response) : Mark[]{
+        var resMarks =  res.json().matches;
+    let marks: Mark[] = [];
+
+   var arr = Object.keys(resMarks).map(key => resMarks[key]);
+
+   for (let mat of arr[0]) {
+      marks.push(<Mark>({
+        HomeMark: mat.,
+        DrawMark: mat.,
+        AwayMark: mat.,
+        }))
+    }
+    return matches;
+  }
+
   private handleError (error: any) {
     // In a real world app, we might use a remote logging infrastructure
     // We'd also dig deeper into the error to get a better message
