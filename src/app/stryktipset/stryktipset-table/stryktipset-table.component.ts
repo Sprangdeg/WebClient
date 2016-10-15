@@ -14,6 +14,7 @@ export class StryktipsetTableComponent implements OnInit {
     errorMessage: string;
     coupong: Match[];
     marks: MarkRow[] = [];
+    jokerNumber: Number;
     mode = 'Observable';
     constructor(private stryktipsetService: StryktipsetService) { }
 
@@ -54,7 +55,15 @@ export class StryktipsetTableComponent implements OnInit {
       this.stryktipsetService.getStryktipsetMarks()
                                 .subscribe(
                                     marks => this.marks = marks,
-                                    error =>  this.errorMessage = <any>error);;
+                                    error =>  this.errorMessage = <any>error);
+      this.jokerNumber = this.getJokerNumber("");
+  }
+
+  getJokerNumber(number: string){
+    if(number.length >= 7)
+      return number;
+     number += Math.floor(Math.random() * 9)
+     return this.getJokerNumber(number);  
   }
 
   initMarks(){
