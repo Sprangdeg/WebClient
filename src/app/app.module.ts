@@ -14,6 +14,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { StudentOrganizerComponent } from './student-organizer/student-organizer.component';
 import { WhatIsItNowComponent } from './what-is-it-now/what-is-it-now.component';
 import { StryktipsetTableComponent } from './stryktipset/stryktipset-table/stryktipset-table.component';
+import { GuessTheFontComponent } from './guess-the-font/guess-the-font.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StryktipsetTableComponent } from './stryktipset/stryktipset-table/stryk
     PagenotfoundComponent,
     StudentOrganizerComponent,
     WhatIsItNowComponent,
-    StryktipsetTableComponent
+    StryktipsetTableComponent,
+    GuessTheFontComponent
   ],
   imports: [
     BrowserModule,
