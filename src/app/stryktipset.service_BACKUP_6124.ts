@@ -13,8 +13,13 @@ import 'rxjs/add/observable/throw';
 
 @Injectable()
 export class StryktipsetService {
+<<<<<<< HEAD
   private stryktipsetUrl = 'http://traitors.northeurope.cloudapp.azure.com/webapi/api/stryktipset';  // URL to web API
   //private stryktipsetUrl = 'http://localhost:2021/api/Stryktipset';  // URL to web API
+=======
+  //private stryktipsetUrl = 'http://traitors.northeurope.cloudapp.azure.com/webapi/api/stryktipset';  // URL to web API
+  private stryktipsetUrl = 'http://localhost:2021/api/Stryktipset';  // URL to web API
+>>>>>>> 77163d2f59154590b9909bc2419599b6bd00bf19
   constructor (private http: Http) {}
 
   getStryktipsetCoupong () : Observable<Match[]> {

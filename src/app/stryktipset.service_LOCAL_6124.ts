@@ -61,9 +61,9 @@ export class StryktipsetService {
 
    for (let mat of arr) {
       marks.push(<MarkRow>({
-        HomeMark: mat.HomeMark,
+        HomeMark: mat.AwayMark,
         DrawMark: mat.DrawMark,
-        AwayMark: mat.AwayMark,
+        AwayMark: mat.HomeMark,
         }))
     }
     return marks;
