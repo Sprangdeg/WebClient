@@ -1,16 +1,12 @@
- <p [class]=questions>
+ <p [class]=question.name>
   -THE LAZY DOG JUMPS OVER THE QUICK BROWN FOX 1234567890 times!
 </p>
 <br>
- <p [class]=questions>
+ <p [class]=question.name>
   -the lazy dog jumps over the quick brown fox?
 </p>
 
- <span style="font-family:{{questions}}">
-  -the lazy dog jumps over the quick brown fox?
-</span>
-
-
+<form>
 <div class="radio">
   <label><input id="answer1" type="radio" name="optradio" (click)="checkAnswer($event)" name="{{answer1.id}}">{{answer1.name}}</label>
 </div>
@@ -26,8 +22,27 @@
 <div class="radio">
   <label><input id="answer5" type="radio" name="optradio" (click)="checkAnswer($event)" name="{{answer5.id}}">{{answer5.name}}</label>
 </div>
+</form>
 
 <div>
-  <span class="label label-success" [hidden]="!correct">Correct!</span>
-  <span class="label label-danger" [hidden]="correct">Wrong!</span>
+  <b>Score</b>
+  <span style="color=green">{{correctAnswers}}</span> <span style="color=red">{{wrongAnswers}}</span>
 </div>
+
+<div id="results">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Your answer</th>
+        <th>Correct answer</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr class="{{answer.correct}}" *ngFor="let answer of answers | reverse">
+           <td>{{answer.guess}}</td>
+           <td>{{answer.answer}}</td>
+        </tr>
+    </tbody>
+  </table>
+</div>
+

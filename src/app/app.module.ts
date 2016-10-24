@@ -16,6 +16,8 @@ import { WhatIsItNowComponent } from './what-is-it-now/what-is-it-now.component'
 import { StryktipsetTableComponent } from './stryktipset/stryktipset-table/stryktipset-table.component';
 import { GuessTheFontComponent } from './guess-the-font/guess-the-font.component';
 
+import { ReversePipe } from './guess-the-font/reverse-array.pipe'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +28,8 @@ import { GuessTheFontComponent } from './guess-the-font/guess-the-font.component
     StudentOrganizerComponent,
     WhatIsItNowComponent,
     StryktipsetTableComponent,
-    GuessTheFontComponent
+    GuessTheFontComponent,
+    ReversePipe
   ],
   imports: [
     BrowserModule,

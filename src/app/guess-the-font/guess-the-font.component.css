@@ -1,29 +1,75 @@
-.HelveticaNeue{
-    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+.Arial{
+    font-family: Arial;
 }
 
-.BaskervilleOldFace{
-    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
+.Helvetica-Neue{
+    font-family: "Helvetica Neue";
 }
 
-.AndaleMono{
-    font-family: "Andale Mono", AndaleMono, monospace;
+.Helvetica{
+    font-family: Helvetica;
+}
+
+.Sans-serif{
+    font-family: sans-serif;
+}
+
+.Baskerville{
+    font-family: Baskerville;
+}
+
+.Baskerville-Old-Face{
+    font-family: "Baskerville Old Face";
+}
+
+.Hoefler-Text{
+    font-family: "Hoefler Text";
+}
+
+.Garamond{
+    font-family: Garamond;
+}
+
+.Times-New-Roman{
+    font-family: "Times New Roman";
+}
+
+.Serif{
+    font-family: serif;
 }
 
 .BigCaslon{
-    font-family: "Big Caslon", "Book Antiqua", Palatino Linotype, Georgia, serif;
+    font-family: "Big Caslon";
 }
 
+.Book-Antiqua{
+    font-family: "Book Antiqua";
+}
+
+.Palatino-Linotype{
+    font-family: Palatino Linotype;
+}
+
+.Georgia{
+    font-family: Georgia;
+}
 
 .Consolas{
-    font-family: Consolas, monaco, monospace;
+    font-family: Consolas;
 }
 
+.monospace{
+    font-family: monospace;
+}
 
-.ArialNarrow{
-    font-family: "Arial Narrow", Arial, sans-serif;
+.monaco{
+    font-family: monaco;
 }
 
 [hidden] {
   display: none !important;
+}
+
+#results{
+    width: 40%;
 }

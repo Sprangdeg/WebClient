@@ -1,4 +1,8 @@
-This is my hobby project to learn Angular 2
+How to run
+
+1. npm install -g angular-cli
+2. npm install
+3. ng serve
 
 
 # WebClient
