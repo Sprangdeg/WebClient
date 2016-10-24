@@ -35,7 +35,7 @@ export class GuessTheFontComponent implements OnInit {
   answer5: Font;
   correct: boolean;
   incorrect: boolean;
-questions: SafeStyle;
+questions: string;
 id : number;
   constructor(private sanitizer: DomSanitizer) { 
     this.createQuestion();
@@ -61,7 +61,7 @@ id : number;
     shuffleFonts();
 
     let index = Math.floor(Math.random() * 5)
-    this.questions = this.sanitizer.bypassSecurityTrustStyle(Fonts[index].name);
+    this.questions = Fonts[index].name;
     this.id = Fonts[index].id;
   }
 

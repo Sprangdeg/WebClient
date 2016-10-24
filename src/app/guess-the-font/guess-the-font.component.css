@@ -1,27 +1,27 @@
 .HelveticaNeue{
-    font-family: 'Arial, "Helvetica Neue", Helvetica, sans-serif;';
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .BaskervilleOldFace{
-    font-family: 'Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;';
+    font-family: Baskerville, "Baskerville Old Face", "Hoefler Text", Garamond, "Times New Roman", serif;
 }
 
 .AndaleMono{
-    font-family: '"Andale Mono", AndaleMono, monospace;';
+    font-family: "Andale Mono", AndaleMono, monospace;
 }
 
 .BigCaslon{
-    font-family: '"Big Caslon", "Book Antiqua", "Palatino Linotype", Georgia, serif;';
+    font-family: "Big Caslon", "Book Antiqua", Palatino Linotype, Georgia, serif;
 }
 
 
 .Consolas{
-    font-family: 'Consolas, monaco, monospace;';
+    font-family: Consolas, monaco, monospace;
 }
 
 
 .ArialNarrow{
-    font-family: '"Arial Narrow", Arial, sans-serif;';
+    font-family: "Arial Narrow", Arial, sans-serif;
 }
 
 [hidden] {
