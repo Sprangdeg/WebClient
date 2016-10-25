@@ -1,11 +1,10 @@
  <p [class]=question.name>
   -THE LAZY DOG JUMPS OVER THE QUICK BROWN FOX 1234567890 times!
 </p>
-<br>
  <p [class]=question.name>
   -the lazy dog jumps over the quick brown fox?
 </p>
-
+<br>
 <form>
 <div class="radio">
   <label><input id="answer1" type="radio" name="optradio" (click)="checkAnswer($event)" name="{{answer1.id}}">{{answer1.name}}</label>
@@ -23,12 +22,11 @@
   <label><input id="answer5" type="radio" name="optradio" (click)="checkAnswer($event)" name="{{answer5.id}}">{{answer5.name}}</label>
 </div>
 </form>
-
-<div>
-  <b>Score</b>
-  <span style="color=green">{{correctAnswers}}</span> <span style="color=red">{{wrongAnswers}}</span>
-</div>
-
+<br>
+Correct: <span class="badge">{{correctAnswers}}</span><br>
+Wrong: <span class="badge">{{wrongAnswers}}</span><br>
+<span class="badge">{{(correctAnswers/wrongAnswers)*100}}%</span>
+<br>
 <div id="results">
   <table class="table table-striped">
     <thead>
